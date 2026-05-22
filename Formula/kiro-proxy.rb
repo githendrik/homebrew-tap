@@ -5,21 +5,21 @@
 class KiroProxy < Formula
   desc "Kiro API Proxy - OpenAI-compatible proxy for Kiro"
   homepage "https://github.com/githendrik/kiro-proxy-go"
-  version "0.1.14"
+  version "0.1.15"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/githendrik/kiro-proxy-go/releases/download/v0.1.14/kiro-proxy_Darwin_x86_64.tar.gz"
-      sha256 "c35c69110342019458dc21cd9347540543160e90728b0a971cbc972e693ce504"
+      url "https://github.com/githendrik/kiro-proxy-go/releases/download/v0.1.15/kiro-proxy_Darwin_x86_64.tar.gz"
+      sha256 "40b2c42dab0a34d7c4ce6f55954316b414bd1b8fe986dfb11eff5ed6b462e645"
 
       define_method(:install) do
         bin.install "kiro-proxy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/githendrik/kiro-proxy-go/releases/download/v0.1.14/kiro-proxy_Darwin_arm64.tar.gz"
-      sha256 "663a59374ecc59dd49d9cb05dcbda9a30856db0c2abb6f7c89c8b92d72a93a83"
+      url "https://github.com/githendrik/kiro-proxy-go/releases/download/v0.1.15/kiro-proxy_Darwin_arm64.tar.gz"
+      sha256 "73764630009f4dce8bf1f1ab2dfe0705ace918b41383883ef43157d1782a5eb5"
 
       define_method(:install) do
         bin.install "kiro-proxy"
@@ -29,15 +29,15 @@ class KiroProxy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/githendrik/kiro-proxy-go/releases/download/v0.1.14/kiro-proxy_Linux_x86_64.tar.gz"
-      sha256 "6613e2b58d0193f814267c37c9cd583418a06aab1c83296aa6140b5ee4dfc752"
+      url "https://github.com/githendrik/kiro-proxy-go/releases/download/v0.1.15/kiro-proxy_Linux_x86_64.tar.gz"
+      sha256 "6f30f5b37dfbcd918186138298c89a1374a400af82dac905a87f7bcc9cbe846c"
       define_method(:install) do
         bin.install "kiro-proxy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/githendrik/kiro-proxy-go/releases/download/v0.1.14/kiro-proxy_Linux_arm64.tar.gz"
-      sha256 "02bbba035d2df206c78caea06c5f393a7207e897943a10ac644994472ffd9bf7"
+      url "https://github.com/githendrik/kiro-proxy-go/releases/download/v0.1.15/kiro-proxy_Linux_arm64.tar.gz"
+      sha256 "31f04d14d452d4c569b26a6984f9c1aa9b1cbcbf5d6a61e1d848f13a09e7a72e"
       define_method(:install) do
         bin.install "kiro-proxy"
       end
